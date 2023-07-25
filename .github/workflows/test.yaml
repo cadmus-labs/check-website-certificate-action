@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v*
+
+jobs:
+  run-action:
+    runs-on: ubuntu-latest
+    name: Run Check Certificate Action
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Check Certificate Action
+        uses: ./
+        with:
+          apiKey: ${{ secrets.WEBSITE_ORACLE_API_KEY }}
+          host: "cadmus-labs.github.io"
