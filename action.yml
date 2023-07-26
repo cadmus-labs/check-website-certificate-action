@@ -19,10 +19,10 @@ branding:
   color: purple
 inputs:
   apiKey:
-    description: "API Key from Rapid API for Website Oracle"
+    description: API Key from Rapid API for Website Oracle
     required: true
   host:
-    description: "The hostname of the website to analyze"
+    description: The hostname of the website to analyze
     required: true
 runs:
   using: "node16"
